@@ -1,4 +1,4 @@
-import { createUseStyles, useTheme, ThemeProvider } from "react-jss";
+import { createUseStyles } from "react-jss";
 import NextArrowButton from "../shared/components/arrowNextButton";
 import WaveEmoji from "../shared/icons/animatedIcons/waveIcon";
 
