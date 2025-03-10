@@ -12,7 +12,8 @@ export const useAuthCodeHandler = () => {
         if (code !== null) {
             AuthService.sendAuthCode(code)
                 .then((response) => {
-                    if (response.access === true) {
+                    if (response.access === true && response.id) {
+                        localStorage.setItem("token", response?.id);
                         localStorage.setItem("access", "true"); // Store as string
                         navigate("/camera"); // Navigate immediately
                     }
