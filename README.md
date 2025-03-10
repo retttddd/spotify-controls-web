@@ -1,22 +1,31 @@
-# Music-Gesture-Control-App (Web)
+# Music Gesture Control App (Web)
 
 ## About
 
-This is a front-end implementation of a demo to demonstrate spotify gesture controls.
+This is a front-end implementation of a demo showcasing **Spotify gesture controls**. It demonstrates the interaction between a web interface and Spotify using gesture controls for music playback.
 
-[**BACK-END DEMO**](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app)
+### [**Back-End Demo**](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app)
 
-[run back-end locally](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app/blob/main/README.md)
+For the back-end demo and setup, refer to the repository:
 
-## Before executing scripts 
+### [Run Back-End Locally](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app/blob/main/README.md)
 
-Rename .env.example into .env in ./src directory and insert each of current secret tokens and links 
+---
 
+## Before Running the App
+
+To set up the app correctly, you need to configure a few environment variables. 
+
+1. Rename `.env.example` to `.env` in the `./src` directory.
+2. Insert your **Spotify** API credentials and **backend** URL into the `.env` file:
+
+```env
 REACT_APP_REDIRECT_LINK=redirect_to_your_app
 REACT_APP_CLIENT_ID=client_open_key
 REACT_APP_CLIENT_SECRET=client_private_key
 REACT_APP_REDIRECT_URI=endpoints_youve_entered_in_dashboard
-REACT_APP_BACKEND_URL=your_backend_url  
+REACT_APP_BACKEND_URL=your_backend_url
+```
 
 ## Available Scripts
 
