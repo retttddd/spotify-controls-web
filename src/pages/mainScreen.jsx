@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 import { createUseStyles } from "react-jss";
 import NowPlaying from "../shared/components/nowPlaying";
 import CustomErrorScreen from "../shared/components/errorScreen";
-import CommonButton from "../shared/components/commonButton";
+import CustomLoading from "../shared/components/loading";
 
 const useStyles = createUseStyles({
     root: {
@@ -24,11 +24,10 @@ const MainScreenLayout = () => {
 
     return (
         <div className={classes.root}>
-            <Suspense fallback={<div>Loading Webcam...</div>}>
+            <Suspense fallback={<CustomLoading />}>
                 <Webcam height={451} width={798} mirrored={true } />
                 <NowPlaying artist="Miau Miau" song="Take me on" />
             </Suspense>
-            <CommonButton/>
         </div>
     );
 };

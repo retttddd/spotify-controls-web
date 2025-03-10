@@ -5,6 +5,7 @@ import CommonButton from "./commonButton";
 
 const useStyles = createUseStyles({
     root: {
+        overflow: "hidden",
         userSelect: "none",
         display: "flex",
         flexDirection: "column",

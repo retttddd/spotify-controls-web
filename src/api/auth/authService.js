@@ -1,8 +1,8 @@
 export const AuthService = {
     async sendAuthCode(code) {
-        const authServer = process.env.REACT_APP_BACKEND_URL;
         try {
-            const response = await fetch('http://127.0.0.1:5000/auth', {
+            const authServer = process.env.REACT_APP_BACKEND_URL + "auth";
+            const response = await fetch(authServer, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

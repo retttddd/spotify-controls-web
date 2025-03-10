@@ -2,6 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import {Suspense, lazy} from "react";
 import {useAuthCodeHandler} from "./api/auth/authHandler";
 import CustomErrorScreen from "./shared/components/errorScreen";
+import CustomLoading from "./shared/components/loading";
 
 const LandingPage = lazy(() => import("./pages/landingPage"));
 const MainScreenLayout = lazy(() => import("./pages/mainScreen"));
@@ -20,11 +21,11 @@ function App() {
     };
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<CustomLoading />}>
             <Routes>
                 <Route path="/" element={<LandingPage onclick={onClick} />} />
                 <Route path="/camera" element={<MainScreenLayout />} />
-                <Route path="/errorTest" element={<CustomErrorScreen />} />
+                <Route path="/error" element={<CustomErrorScreen />} />
             </Routes>
         </Suspense>
     );
