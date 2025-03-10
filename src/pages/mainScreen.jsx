@@ -1,7 +1,8 @@
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy } from "react";
 import { createUseStyles } from "react-jss";
 import NowPlaying from "../shared/components/nowPlaying";
-import CustomErrorScreen from "./errorscreen";
+import CustomErrorScreen from "../shared/components/errorScreen";
+import CommonButton from "../shared/components/commonButton";
 
 const useStyles = createUseStyles({
     root: {
@@ -13,10 +14,9 @@ const useStyles = createUseStyles({
 
 const Webcam = lazy(() => import("react-webcam"));
 
-const CustomWebcam = () => {
+const MainScreenLayout = () => {
     const classes = useStyles();
     const hasAccess = localStorage.getItem("access");
-    console.log(hasAccess);
 
     if (!hasAccess) {
         return <CustomErrorScreen />;
@@ -25,11 +25,12 @@ const CustomWebcam = () => {
     return (
         <div className={classes.root}>
             <Suspense fallback={<div>Loading Webcam...</div>}>
-                <Webcam height={500} width={800} />
+                <Webcam height={451} width={798} mirrored={true } />
                 <NowPlaying artist="Miau Miau" song="Take me on" />
             </Suspense>
+            <CommonButton/>
         </div>
     );
 };
 
-export default CustomWebcam;
+export default MainScreenLayout;

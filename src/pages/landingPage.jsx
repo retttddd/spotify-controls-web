@@ -58,7 +58,7 @@ const useStyles = createUseStyles({
     },
 });
 
-const WelcomPage = ({ onclick }) => {
+const LandingPage = ({ onclick }) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -76,4 +76,4 @@ const WelcomPage = ({ onclick }) => {
     );
 };
 
-export default WelcomPage;
+export default LandingPage;

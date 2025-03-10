@@ -1,10 +1,10 @@
-import {Route, Routes, useNavigate} from "react-router-dom";
-import {Suspense, lazy, useEffect, useState} from "react";
+import {Route, Routes} from "react-router-dom";
+import {Suspense, lazy} from "react";
 import {useAuthCodeHandler} from "./api/auth/authHandler";
-import CustomErrorScreen from "./pages/errorscreen";
+import CustomErrorScreen from "./shared/components/errorScreen";
 
-const WelcomPage = lazy(() => import("./pages/welcome"));
-const CustomWebcam = lazy(() => import("./pages/controlsWebCam"));
+const LandingPage = lazy(() => import("./pages/landingPage"));
+const MainScreenLayout = lazy(() => import("./pages/mainScreen"));
 
 function App() {
     useAuthCodeHandler();
@@ -22,8 +22,9 @@ function App() {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-                <Route path="/" element={<WelcomPage onclick={onClick} />} />
-                <Route path="/camera" element={<CustomWebcam />} />
+                <Route path="/" element={<LandingPage onclick={onClick} />} />
+                <Route path="/camera" element={<MainScreenLayout />} />
+                <Route path="/errorTest" element={<CustomErrorScreen />} />
             </Routes>
         </Suspense>
     );

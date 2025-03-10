@@ -1,6 +1,7 @@
-import { createUseStyles } from "react-jss";
+import {createUseStyles} from "react-jss";
 import { AlertTriangle } from "lucide-react";
 import {useNavigate} from "react-router-dom";
+import CommonButton from "./commonButton";
 
 const useStyles = createUseStyles({
     root: {
@@ -14,11 +15,12 @@ const useStyles = createUseStyles({
         color: "#976be3",
         textAlign: "center",
         padding: "20px",
+        gap: "15px",
     },
     icon: {
         fontSize: "60px",
         color: "#976be3",
-        marginBottom: "20px",
+        marginBottom: "15px",
     },
     message: {
         fontSize: "24px",
@@ -41,7 +43,7 @@ const CustomErrorScreen = () => {
             <div className={classes.description}>
                 We encountered an unexpected error. Please try again later.
             </div>
-            <button onClick={()=>{navigate("/");}}> Go Home</button>
+            <CommonButton text={'Go Home'} onClick={()=>{navigate('/')}} />
         </div>
     );
 };
