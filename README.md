@@ -1,5 +1,12 @@
 # Music-Gesture-Control-App (Web)
 
+## About
+
+This is a front-end implementation of a demo to demonstrate spotify gesture controls.
+
+[**BACK-END DEMO**](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app)
+  [run back-end locally](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app/blob/main/README.md)
+
 ## Before executing scripts 
 
 Rename .env.example into .env in ./src directory and insert each of current secret tokens and links 
