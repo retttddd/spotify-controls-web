@@ -1,4 +1,4 @@
-# Spotify Camera Controller (Web)
+# Music-Gesture-Control-App (Web)
 
 ## Before executing scripts 
 
