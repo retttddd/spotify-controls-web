@@ -4,6 +4,7 @@ import NowPlaying from "../shared/components/nowPlaying";
 import CustomErrorScreen from "../shared/components/errorScreen";
 import CustomLoading from "../shared/components/loading";
 import useDeviceDetection from "../detectDeviceHook";
+import {sendCommand} from "../api/gonextapi";
 
 const useStyles = createUseStyles({
     root: {
@@ -52,12 +53,11 @@ const MainScreenLayout = () => {
     return (
         <div className={`${classes.root} ${layoutClass}`}>
             <Suspense fallback={<CustomLoading />}>
-                <Webcam
-                    height={device === "Mobile" ? 300 : 451}
-                    width={device === "Mobile" ? 400 : 798}
-                    mirrored={true}
-                />
-                <NowPlaying artist="Miau Miau" song="Take me on" />
+                <button onClick={() => sendCommand("next")}>GO NEXT TRACK</button>
+                <button onClick={() => sendCommand("previous")}>GO PREVIOUS TRACK</button>
+                <button onClick={() => sendCommand("pause")}>PAUSE</button>
+                <button onClick={() => sendCommand("play")}>PLAY</button>
+                <Webcam ref={webcamRef} screenshotFormat="image/jpeg" width={device === "Mobile" ? 400 : 798} height={device === "Mobile" ? 300 : 451} mirrored/>
             </Suspense>
         </div>
     );
