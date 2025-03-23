@@ -2,7 +2,7 @@
 
 ## About
 
-This is a front-end implementation of a demo showcasing **Spotify gesture controls**. It demonstrates the interaction between a web interface and Spotify using gesture controls for music playback.
+This is a **front-end** implementation of a demo showcasing **Spotify gesture controls**. It demonstrates the interaction between a web interface and Spotify using gesture controls for music playback.
 
 ### [**Back-End Demo**](https://github.com/MrBurzhuadotexe/Music-Gesture-Control-app)
 
